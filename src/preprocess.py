@@ -49,8 +49,9 @@ def remove_stopwords(text, is_lower_case=False):
     return filtered_text
 
 # Merge of above functions
-def normalize_test(text):
+def normalize_text(text):
     text = denoise_text(text)
     text = remove_special_characters(text)
     text = simple_stemmer(text)
     text = remove_stopwords(text)
+    return text
