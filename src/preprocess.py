@@ -4,7 +4,6 @@ import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-from sklearn.preprocessing import LabelBinarizer
 
 #Removing the html strips
 def strip_html(text):
@@ -45,7 +44,6 @@ def remove_stopwords(text, is_lower_case=False):
         filtered_tokens = [token for token in tokens if token not in stopword_list]
     else:
         filtered_tokens = [token for token in tokens if token.lower() not in stopword_list]
-    filtered_text = ' '.join(filtered_tokens)    
     return filtered_text
 
 # Merge of above functions
